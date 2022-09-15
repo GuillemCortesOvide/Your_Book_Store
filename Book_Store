@@ -1,0 +1,24 @@
+
+print('¡Welcome to my Book Store! Which book would you like to buy?')
+
+libro_user = input('Add the title of the book you want to buy: ')
+
+id_libro = input('Enter the book ID: ')
+
+print('We remind you that shipping is free with purchases over 50€.')
+print('Purchases under 50€ include 15.50€ (V.A.T. included) for shipping and handling.')
+
+precio_libro = float(input('Enter the price of the book: '))
+
+if precio_libro >= 50:
+    print(f'With the purchase of the book "{libro_user}" with ID "{id_libro}" shipping is free.')
+    print(f'- Price of "{libro_user}" is: ',precio_libro)
+    print(f'- Shipping costs:', 0.00,'€')
+    print('--------------------------------')
+    print('*Total to be paid: ', precio_libro,'€ (V.A.T. included)*')
+else:
+    print(f'With the purchase of the book "{libro_user}" with ID "{id_libro}" shipping is not free.')
+    print(f'- Price of "{libro_user}" is: ', precio_libro, "€")
+    print(f'- Shipping costs:', 15.50, '€')
+    print('--------------------------------')
+    print('*Total to be paid: ', precio_libro + 15.50,'€ (V.A.T. included)*')
